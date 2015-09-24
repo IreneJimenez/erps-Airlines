@@ -83,6 +83,10 @@ public class Bd extends Main{
 		statement.executeUpdate(deleteSql);
 	}
 
+	/**
+	 * Show all customers
+	 * @throws SQLException
+	 */
 	public void showAll() throws SQLException{
 		String select = "select * from customer";
 		ResultSet resultSet = statement.executeQuery(select);
@@ -91,6 +95,10 @@ public class Bd extends Main{
 		
 	}
 
+	/**
+	 * Close the database
+	 * @throws SQLException
+	 */
 	public void close() throws SQLException {
 	     connection.close();
 		
